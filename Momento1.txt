@@ -1,0 +1,96 @@
+1. Que diferencia hay entre un igual ( = ) y un doble ( == )
+(=) Asigna el valor a una variable
+(==) Igualdad (en comparación)
+
+2. Cuales son los tipos de datos básico de java
+byte
+short
+int
+long
+float
+double
+boolean
+char
+String
+
+3. Quién es la empresa que actualmente se encarga de mantener el desarrollo de java
+Oracle Corporation
+
+4. En qué otros campos se puede utilizar java para crear software
+Videojuegos, procesadores de texto, bancos
+
+
+SOLUCION EJERCICIO JAVA
+
+
+package javaapplication17;
+ import java.util.Scanner;
+
+/**
+ *
+ * @author User
+ */
+public class JavaApplication17 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    
+       Scanner objcaptura = new Scanner(System.in);
+       char MENU;
+       int NRPER;
+       float VALOR=0, DCTO;
+       System.out.print("Digite el número de personas que van a comer: ");
+       NRPER = objcaptura.nextInt();
+       System.out.println("             MENU RESTAURANTE MUERTE LENTA");
+       System.out.println("Opción 1 ---> HAMBURGUESA");
+       System.out.println("Opción 2 ---> PERRO");
+       System.out.println("Opción 3 ---> SALCHIPAPAS");
+       System.out.println("Opción 4 ---> CHORIZOS");
+       System.out.print("Digite el número de la opción para el menú ---> ");
+       MENU = objcaptura.next().charAt(0);
+       switch (MENU)
+        {
+            case '1': 
+            {
+                    VALOR = NRPER * 10000;
+                    break;
+            }
+            case '2': 
+            {
+                    VALOR = NRPER * 8000;
+                    break;
+            }
+            case '3': 
+            {
+                    VALOR = NRPER * 6000;
+                    break;
+            }
+            case '4': 
+            {
+                    VALOR = NRPER * 7000;
+                    break;
+            }
+            default:
+            {
+                System.out.print("opción de Menú inválida");
+                break;
+            }
+        }
+       System.out.println("Valor total para esa opción de menú es: $" + VALOR);
+       if (VALOR > 20000 )
+       {
+         DCTO = VALOR * (10/100);  
+         System.out.println("Tuvo un descuento por compras superiores a 20.000: $" + DCTO);
+       }
+       else
+       {
+          
+         
+       }
+
+    }
+    
+    
+}
